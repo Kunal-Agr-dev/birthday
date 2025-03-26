@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Purvi!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 20vh;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 5rem;
+      color: #ff4e78;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff4e78;
+      color: #fff;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 40px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff74a4;
+      transform: scale(1.1);
+    }
+
+    #wish {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    #wish.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Flower Animation */
+    .flowers .flower {
+      width: 70px;
+      height: 70px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/2917/2917995.png');
+      background-size: cover;
+      position: absolute;
+      animation: float 10s infinite linear;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) translateX(0vw); opacity: 1; }
+      100% { transform: translateY(-100vh) translateX(calc(-50vw + 100vw)); opacity: 0; }
+    }
+
+    .flower:nth-child(1) { left: 10%; animation-duration: 12s; }
+    .flower:nth-child(2) { left: 30%; animation-duration: 14s; }
+    .flower:nth-child(3) { left: 50%; animation-duration: 10s; }
+    .flower:nth-child(4) { left: 70%; animation-duration: 11s; }
+    .flower:nth-child(5) { left: 90%; animation-duration: 13s; }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday Purvi! 🎂</h1>
+    <p>Wishing you a magical day filled with joy and laughter! 🎉</p>
+    <button onclick="showWish()">Click for a Surprise!</button>
+    <div id="wish">Have a beautiful and unforgettable birthday, Purvi! 💖</div>
+  </div>
+  
+  <div class="flowers">
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+  </div>
+
+  <script>
+    function showWish() {
+      document.getElementById('wish').classList.add('show');
+    }
+  </script>
+</body>
+</html>
